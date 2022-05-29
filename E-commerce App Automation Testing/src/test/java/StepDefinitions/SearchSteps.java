@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.SearchPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,20 +12,21 @@ import org.testng.asserts.SoftAssert;
 public class SearchSteps {
 
     SoftAssert soft = new SoftAssert();
+    SearchPage search = new SearchPage();
 
 @Given("user clicks in search field")
     public void userClicksInSearchField() {
-        Hooks.driver.findElement(By.id("small-searchterms")).click();
+        search.searchField().click();
 }
 
 @When("user search for a product with its name")
     public void SearchForProduct() {
-        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys("laptop");
+        search.searchField().sendKeys("laptop");
 }
 
 @And("user clicks enter")
     public void userClicksEnter() {
-        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys(Keys.ENTER);
+        search.searchField().sendKeys(Keys.ENTER);
 }
 
 @Then("user could find the available products matching his search")

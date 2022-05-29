@@ -1,3 +1,4 @@
+@Smoke
 Feature: user should be able to register with new accounts
 
 

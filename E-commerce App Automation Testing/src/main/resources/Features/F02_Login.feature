@@ -1,8 +1,9 @@
+@Smoke
 Feature: user should be able to login to the system
 
   Scenario: user enters valid email and valid password
     Given user navigates to login page
-    When user enters "automation1@test.com" and "$Passw0rd"
+    When user enters "automation2@test.com" and "$Passw0rd"
     And user clicks the login button
     Then user could login successfully
 

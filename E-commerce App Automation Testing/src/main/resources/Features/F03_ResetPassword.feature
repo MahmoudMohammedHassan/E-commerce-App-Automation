@@ -1,3 +1,4 @@
+@Smoke
 Feature: user could reset his forgotten password successfully
 
   Scenario: user could reset his password

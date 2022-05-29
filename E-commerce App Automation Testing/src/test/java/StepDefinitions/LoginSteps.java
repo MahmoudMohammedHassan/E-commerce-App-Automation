@@ -1,17 +1,20 @@
 package StepDefinitions;
 
+import Pages.LoginPage;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
 public class LoginSteps {
     SoftAssert soft = new SoftAssert();
+    LoginPage login = new LoginPage();
 
-@And("user navigates to login page")
+@Given("user navigates to login page")
     public void userNavigatesToLoginPage() {
-         Hooks.driver.findElement(By.cssSelector("a[href=\"/login?returnUrl=%2F\"]")).click();
+
+         login.logInIcon().click();
          soft.assertTrue(Hooks.driver.getCurrentUrl().contains("https://demo.nopcommerce.com/login?returnUrl=%2F"));
          soft.assertAll();
 }
@@ -19,28 +22,25 @@ public class LoginSteps {
 
 @When("^user enters \"(.*)\" and \"(.*)\"$")
     public void validLogin(String email, String password) {
-        Hooks.driver.findElement(By.id("Email")).sendKeys(email);
-        Hooks.driver.findElement(By.id("Password")).sendKeys(password);
-
+        login.Email().sendKeys(email);
+        login.Password().sendKeys(password);
     }
 
 @And("user clicks the login button")
     public void loginBtnClick() {
-        Hooks.driver.findElement(By.cssSelector("[class=\"button-1 login-button\"]")).click();
+      login.loginBtn().click();
 }
 
 @Then("user could login successfully")
     public void successfulLogin() {
-    soft.assertTrue(Hooks.driver.getCurrentUrl().contains("https://demo.nopcommerce.com/"));
+    soft.assertTrue(Hooks.driver.getCurrentUrl().equals("https://demo.nopcommerce.com/"));
     soft.assertAll();
 }
 
 @Then("user could not login")
     public void unsuccessfulLogin() {
-        soft.assertTrue(Hooks.driver.findElement(By.cssSelector("div[class=\"message-error validation-summary-errors\"]")).isDisplayed());
+        soft.assertTrue(login.unsuccessfulLogMsg().isDisplayed());
         soft.assertAll();
-
-
     }
 
 
