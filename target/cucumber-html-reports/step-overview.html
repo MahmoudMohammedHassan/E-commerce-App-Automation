@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>E-commerce App Automation Testing</td>
+                          <td>1</td>
+                        <td>29 May 2022, 22:47</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.ColorFilterSteps.checkItemsFiltered()</td>
+                <td>1</td>
+                <td class="duration" data-value="6992100">006ms</td>
+                <td class="duration" data-value="6992100">006ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ColorFilterSteps.checkRedirectToCategory()</td>
+                <td>1</td>
+                <td class="duration" data-value="5058500">005ms</td>
+                <td class="duration" data-value="5058500">005ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ColorFilterSteps.selectCategory_Colors()</td>
+                <td>1</td>
+                <td class="duration" data-value="4240407400">4s 240ms</td>
+                <td class="duration" data-value="4240407400">4s 240ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ColorFilterSteps.selectColor()</td>
+                <td>1</td>
+                <td class="duration" data-value="79489100">079ms</td>
+                <td class="duration" data-value="79489100">079ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CompareListSteps.addProductsToCompareList()</td>
+                <td>1</td>
+                <td class="duration" data-value="4195152000">4s 195ms</td>
+                <td class="duration" data-value="4195152000">4s 195ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CompareListSteps.checkDirectedToCompareList()</td>
+                <td>1</td>
+                <td class="duration" data-value="3997100">003ms</td>
+                <td class="duration" data-value="3997100">003ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CompareListSteps.navigateToCompareList()</td>
+                <td>1</td>
+                <td class="duration" data-value="1349924500">1s 349ms</td>
+                <td class="duration" data-value="1349924500">1s 349ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CompareListSteps.validateNamesOfProductsInCompareList()</td>
+                <td>1</td>
+                <td class="duration" data-value="88948700">088ms</td>
+                <td class="duration" data-value="88948700">088ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.quitBrowser()</td>
+                <td>14</td>
+                <td class="duration" data-value="8753233000">8s 753ms</td>
+                <td class="duration" data-value="625230928">625ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.userOpenBrowser()</td>
+                <td>14</td>
+                <td class="duration" data-value="74629182900">1m 14s 629ms</td>
+                <td class="duration" data-value="5330655921">5s 330ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.LoginSteps.loginBtnClick()</td>
+                <td>11</td>
+                <td class="duration" data-value="14361668900">14s 361ms</td>
+                <td class="duration" data-value="1305606263">1s 305ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.LoginSteps.successfulLogin()</td>
+                <td>10</td>
+                <td class="duration" data-value="91942800">091ms</td>
+                <td class="duration" data-value="9194280">009ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.LoginSteps.unsuccessfulLogin()</td>
+                <td>1</td>
+                <td class="duration" data-value="67944900">067ms</td>
+                <td class="duration" data-value="67944900">067ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.LoginSteps.userNavigatesToLoginPage()</td>
+                <td>12</td>
+                <td class="duration" data-value="11134599400">11s 134ms</td>
+                <td class="duration" data-value="927883283">927ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.LoginSteps.validLogin(java.lang.String,java.lang.String)</td>
+                <td>11</td>
+                <td class="duration" data-value="2937898300">2s 937ms</td>
+                <td class="duration" data-value="267081663">267ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.RegisterSteps.successfulRegister()</td>
+                <td>1</td>
+                <td class="duration" data-value="60964300">060ms</td>
+                <td class="duration" data-value="60964300">060ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.RegisterSteps.userClicksRegisterBtn()</td>
+                <td>1</td>
+                <td class="duration" data-value="1248969800">1s 248ms</td>
+                <td class="duration" data-value="1248969800">1s 248ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.RegisterSteps.userEntersData()</td>
+                <td>1</td>
+                <td class="duration" data-value="1175327000">1s 175ms</td>
+                <td class="duration" data-value="1175327000">1s 175ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.RegisterSteps.userNavigatesToRegisterPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="1060492500">1s 060ms</td>
+                <td class="duration" data-value="1060492500">1s 060ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ResetPasswordSteps.clickForgotPassword()</td>
+                <td>1</td>
+                <td class="duration" data-value="1010724100">1s 010ms</td>
+                <td class="duration" data-value="1010724100">1s 010ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ResetPasswordSteps.clickRecoverBtn()</td>
+                <td>1</td>
+                <td class="duration" data-value="947456300">947ms</td>
+                <td class="duration" data-value="947456300">947ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ResetPasswordSteps.emailSentCheck()</td>
+                <td>1</td>
+                <td class="duration" data-value="41977000">041ms</td>
+                <td class="duration" data-value="41977000">041ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ResetPasswordSteps.enterRecoveryEmail()</td>
+                <td>1</td>
+                <td class="duration" data-value="160908100">160ms</td>
+                <td class="duration" data-value="160908100">160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ResetPasswordSteps.enterValidEmail()</td>
+                <td>1</td>
+                <td class="duration" data-value="111935800">111ms</td>
+                <td class="duration" data-value="111935800">111ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SearchSteps.SearchForProduct()</td>
+                <td>1</td>
+                <td class="duration" data-value="137920600">137ms</td>
+                <td class="duration" data-value="137920600">137ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SearchSteps.userClicksEnter()</td>
+                <td>1</td>
+                <td class="duration" data-value="982340400">982ms</td>
+                <td class="duration" data-value="982340400">982ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SearchSteps.userClicksInSearchField()</td>
+                <td>1</td>
+                <td class="duration" data-value="100941900">100ms</td>
+                <td class="duration" data-value="100941900">100ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SearchSteps.userFindProducts()</td>
+                <td>1</td>
+                <td class="duration" data-value="10001400">010ms</td>
+                <td class="duration" data-value="10001400">010ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SelectCategorySteps.checkSelectedSubCategory()</td>
+                <td>1</td>
+                <td class="duration" data-value="10995000">010ms</td>
+                <td class="duration" data-value="10995000">010ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SelectCategorySteps.hoverCategory()</td>
+                <td>1</td>
+                <td class="duration" data-value="1161841900">1s 161ms</td>
+                <td class="duration" data-value="1161841900">1s 161ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SelectCategorySteps.selectSubcategory()</td>
+                <td>1</td>
+                <td class="duration" data-value="1107201000">1s 107ms</td>
+                <td class="duration" data-value="1107201000">1s 107ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ShoppingCartSteps.addProductsToShoppingCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="4057232500">4s 057ms</td>
+                <td class="duration" data-value="4057232500">4s 057ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ShoppingCartSteps.checkDirectedToShoppingCartPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="10994200">010ms</td>
+                <td class="duration" data-value="5497100">005ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ShoppingCartSteps.checkNumOfProductsInShoppingCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ShoppingCartSteps.clickOnShoppingCartIcon()</td>
+                <td>2</td>
+                <td class="duration" data-value="2333631400">2s 333ms</td>
+                <td class="duration" data-value="1166815700">1s 166ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ShoppingCartSteps.countNumbOfProductsInShoppingCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="127925800">127ms</td>
+                <td class="duration" data-value="127925800">127ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.checkConfirmationMsg()</td>
+                <td>1</td>
+                <td class="duration" data-value="2811978400">2s 811ms</td>
+                <td class="duration" data-value="2811978400">2s 811ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.checkDirectToCheckoutPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="39973200">039ms</td>
+                <td class="duration" data-value="39973200">039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.checkTermsBox()</td>
+                <td>1</td>
+                <td class="duration" data-value="73957400">073ms</td>
+                <td class="duration" data-value="73957400">073ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickCheckoutBtn()</td>
+                <td>1</td>
+                <td class="duration" data-value="1907158300">1s 907ms</td>
+                <td class="duration" data-value="1907158300">1s 907ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickConfirmBtn()</td>
+                <td>1</td>
+                <td class="duration" data-value="687759200">687ms</td>
+                <td class="duration" data-value="687759200">687ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickContinueButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="119928900">119ms</td>
+                <td class="duration" data-value="119928900">119ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickContinueButton2()</td>
+                <td>1</td>
+                <td class="duration" data-value="546951200">546ms</td>
+                <td class="duration" data-value="546951200">546ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickContinueButton3()</td>
+                <td>1</td>
+                <td class="duration" data-value="520546100">520ms</td>
+                <td class="duration" data-value="520546100">520ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.clickContinueButton4()</td>
+                <td>1</td>
+                <td class="duration" data-value="479497300">479ms</td>
+                <td class="duration" data-value="479497300">479ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.enterAddress()</td>
+                <td>1</td>
+                <td class="duration" data-value="276842600">276ms</td>
+                <td class="duration" data-value="276842600">276ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.enterCity()</td>
+                <td>1</td>
+                <td class="duration" data-value="164450700">164ms</td>
+                <td class="duration" data-value="164450700">164ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.enterPhoneNumber()</td>
+                <td>1</td>
+                <td class="duration" data-value="194890000">194ms</td>
+                <td class="duration" data-value="194890000">194ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.enterPostalCode()</td>
+                <td>1</td>
+                <td class="duration" data-value="152912200">152ms</td>
+                <td class="duration" data-value="152912200">152ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SuccessfulOrderSteps.selectCountry()</td>
+                <td>1</td>
+                <td class="duration" data-value="3111823200">3s 111ms</td>
+                <td class="duration" data-value="3111823200">3s 111ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwitchCurrencySteps.switchCurrency()</td>
+                <td>1</td>
+                <td class="duration" data-value="1246649300">1s 246ms</td>
+                <td class="duration" data-value="1246649300">1s 246ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwitchCurrencySteps.validateCurrencyChanged()</td>
+                <td>1</td>
+                <td class="duration" data-value="3319872800">3s 319ms</td>
+                <td class="duration" data-value="3319872800">3s 319ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwitchCurrencySteps.validateDefaultCurrency()</td>
+                <td>1</td>
+                <td class="duration" data-value="1051532400">1s 051ms</td>
+                <td class="duration" data-value="1051532400">1s 051ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.TagSelectionSteps.checkSelectedCat()</td>
+                <td>1</td>
+                <td class="duration" data-value="5998000">005ms</td>
+                <td class="duration" data-value="5998000">005ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.TagSelectionSteps.checkSelectedTag()</td>
+                <td>1</td>
+                <td class="duration" data-value="59966300">059ms</td>
+                <td class="duration" data-value="59966300">059ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.TagSelectionSteps.selectAnyTag()</td>
+                <td>1</td>
+                <td class="duration" data-value="952003700">952ms</td>
+                <td class="duration" data-value="952003700">952ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.TagSelectionSteps.selectCategory()</td>
+                <td>1</td>
+                <td class="duration" data-value="956713500">956ms</td>
+                <td class="duration" data-value="956713500">956ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.WishlistSteps.addProductsToWishlist()</td>
+                <td>1</td>
+                <td class="duration" data-value="4032647700">4s 032ms</td>
+                <td class="duration" data-value="4032647700">4s 032ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.WishlistSteps.checkDirectedToWishlist()</td>
+                <td>1</td>
+                <td class="duration" data-value="6996200">006ms</td>
+                <td class="duration" data-value="6996200">006ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.WishlistSteps.checkNumOfProductsInWishlist()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.WishlistSteps.clickWishlistIcon()</td>
+                <td>1</td>
+                <td class="duration" data-value="1034436300">1s 034ms</td>
+                <td class="duration" data-value="1034436300">1s 034ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.WishlistSteps.countNumbOfProductsInWishlist()</td>
+                <td>1</td>
+                <td class="duration" data-value="94946900">094ms</td>
+                <td class="duration" data-value="94946900">094ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>62</td>
+              <td>130</td>
+              <td class="duration">2m 41s 656ms</td>
+              <td class="duration">1s 243ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
